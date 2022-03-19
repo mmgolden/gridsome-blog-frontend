@@ -9,6 +9,7 @@
     "lint:fix": "eslint --ext .js,.vue . --fix"
   },
   "dependencies": {
+    "@gridsome/source-graphql": "^0.1.0",
     "gridsome": "^0.7.23"
   },
   "devDependencies": {
