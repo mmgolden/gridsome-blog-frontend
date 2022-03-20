@@ -13,17 +13,17 @@ module.exports = {
   },
   darkMode: "class",
   theme: {
-    colors: {
-      gray: {
-        dark: "#EFF1F3",
-        DEFAULT: "#F6F8FA"
-      },
-      navy: {
-        dark: "#293443",
-        DEFAULT: "#313E50"
-      }
-    },
     extend: {
+      colors: {
+        gray: {
+          dark: "#EFF1F3",
+          DEFAULT: "#F6F8FA"
+        },
+        navy: {
+          dark: "#293443",
+          DEFAULT: "#313E50"
+        }
+      },
       typography: (theme) => ({
         light: {
           css: [
