@@ -10,5 +10,11 @@
   html,
   body {
     font-family: Lora, ui-serif, serif;
+    @apply bg-gray;
+  }
+
+  html.dark,
+  html.dark body {
+    @apply bg-navy;
   }
 }
