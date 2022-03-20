@@ -1,10 +1,11 @@
 <template>
   <button
+    class="flex justify-center items-center"
     :aria-label="theme === 'light' ? 'Toggle dark theme' : 'Toggle light theme'"
     @click="toggleTheme"
   >
-    <Sun v-if="theme === 'light'" class="w-6 ml-4" />
-    <Moon v-else class="w-6 ml-4" />
+    <Sun v-if="theme === 'light'" class="w-6" />
+    <Moon v-else class="w-6" />
   </button>
 </template>
 
