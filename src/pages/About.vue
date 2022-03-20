@@ -13,7 +13,8 @@
 <script>
 export default {
   metaInfo: {
-    title: "About us"
+    title: "About",
+    titleTemplate: "Melinda Golden | %s"
   }
 };
 </script>
