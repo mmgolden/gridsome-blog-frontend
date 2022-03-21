@@ -4,7 +4,7 @@
     <Header />
 
     <!-- Page container -->
-    <main class="container pt-16 mx-auto">
+    <main class="pt-16 -mt-0.5">
       <slot />
     </main>
 
