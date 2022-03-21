@@ -1,25 +1,18 @@
 <template>
   <Layout>
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
-      excepturi labore tempore expedita, et iste tenetur suscipit explicabo!
-      Dolores, aperiam non officia eos quod asperiores
-    </p>
+    <!-- Hero -->
+    <Hero />
   </Layout>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
+import Hero from "@/components/Hero.vue";
+
 export default {
+  components: {
+    Hero
+  },
+
   metaInfo: {
     title: "Melinda Golden",
     titleTemplate: "%s"
