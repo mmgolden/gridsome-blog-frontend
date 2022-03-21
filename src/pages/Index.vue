@@ -1,16 +1,18 @@
 <template>
   <Layout>
-    <!-- Hero -->
     <Hero />
+    <Introduction />
   </Layout>
 </template>
 
 <script>
 import Hero from "@/components/Hero.vue";
+import Introduction from "@/components/Introduction.vue";
 
 export default {
   components: {
-    Hero
+    Hero,
+    Introduction
   },
 
   metaInfo: {
