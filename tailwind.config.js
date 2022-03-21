@@ -22,6 +22,9 @@ module.exports = {
         navy: {
           dark: "#293443",
           DEFAULT: "#313E50"
+        },
+        gold: {
+          DEFAULT: "#FFAC0A"
         }
       },
       typography: (theme) => ({
