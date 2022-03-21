@@ -1,8 +1,8 @@
 <template>
   <div class="bg-gray-dark dark:bg-navy-dark">
-    <div class="container mx-auto lg:grid grid-cols-2 px-4 2xl:px-0">
+    <div class="container mx-auto lg:grid grid-cols-2 gap-4 px-4 2xl:px-0">
       <!-- Introduction -->
-      <div class="py-16 lg:py-36">
+      <div class="pt-16 pb-96 lg:pt-36 lg:pb-36">
         <h1
           class="text-4xl lg:text-5xl mb-2.5 font-bold text-navy dark:text-gray"
         >
@@ -15,13 +15,8 @@
 
       <!-- Image -->
       <div class="relative lg:flex justify-center">
-        <div class="image lg:absolute -bottom-14 2xl:-bottom-20 lg:ml-14">
-          <g-image
-            src="~/assets/pngs/cutout.png"
-            quality="100"
-            immediate
-            class="w-full"
-          />
+        <div class="image absolute -bottom-24 2xl:-bottom-20 lg:ml-14">
+          <g-image src="~/assets/pngs/cutout.png" quality="100" immediate />
         </div>
       </div>
     </div>
@@ -29,9 +24,8 @@
 </template>
 
 <style scoped>
-@media screen and (min-width: 1024px) {
-  .image {
-    width: 359px;
-  }
+.image {
+  width: 100%;
+  max-width: 359px;
 }
 </style>
