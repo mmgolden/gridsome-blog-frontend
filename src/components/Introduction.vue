@@ -18,8 +18,8 @@
         say that I love CSS.
       </p>
       <g-link
-        class="flex ml-auto text-lg font-bold text-navy dark:text-gray"
-        to="/"
+        class="flex items-center lg:ml-auto text-lg font-bold text-navy dark:text-gray"
+        to="/about/"
       >
         Read more
         <ArrowRight class="ml-1 stroke-current text-navy dark:text-gray" />
@@ -37,5 +37,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped></style>
