@@ -35,6 +35,13 @@
             >
               About
             </g-link>
+            <g-link
+              class="py-4 lg:py-0 px-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              to="/blog/"
+              @click="closeMenu"
+            >
+              Blog
+            </g-link>
           </nav>
 
           <div class="hidden lg:block h-7 w-px mx-6 bg-navy dark:bg-gray" />
