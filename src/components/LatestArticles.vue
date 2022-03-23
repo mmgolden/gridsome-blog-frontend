@@ -1,11 +1,13 @@
 <template>
   <div class="py-44 bg-gray-dark dark:bg-navy-dark">
-    <div class="container mx-auto lg:flex justify-between pb-16 px-4 2xl:px-0">
+    <div
+      class="container mx-auto flex flex-col lg:flex-row lg:justify-between pb-16 px-4 2xl:px-0"
+    >
       <h2 class="text-4xl font-bold pb-5 lg:pb-0 text-navy dark:text-gray">
         Latest Articles
       </h2>
       <g-link
-        class="flex items-center ml-auto text-lg font-bold text-navy dark:text-gray"
+        class="more-articles flex items-center mr-auto lg:mr-0 lg:ml-auto text-lg font-bold text-navy dark:text-gray"
         to="/blog/"
       >
         More articles
@@ -92,3 +94,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.more-articles {
+  height: 29px;
+}
+</style>
