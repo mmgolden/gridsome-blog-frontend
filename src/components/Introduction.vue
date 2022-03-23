@@ -18,7 +18,7 @@
         say that I love CSS.
       </p>
       <g-link
-        class="flex items-center lg:ml-auto text-lg font-bold text-navy dark:text-gray"
+        class="flex items-center mr-auto lg:mr-0 lg:ml-auto text-lg font-bold text-navy dark:text-gray"
         to="/about/"
       >
         Read more

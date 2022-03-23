@@ -17,4 +17,14 @@
   html.dark body {
     @apply bg-navy;
   }
+
+  a:not(.no-underline) {
+    box-shadow: inset 0 -1px 0 0 #3abfc8;
+    border-bottom: 1px solid #3abfc8;
+    transition: box-shadow 0.3s;
+  }
+
+  a:not(.no-underline):hover {
+    box-shadow: inset 0 -30px 0 0 #3abfc8;
+  }
 }

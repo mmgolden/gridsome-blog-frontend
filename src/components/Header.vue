@@ -5,7 +5,7 @@
       <div>
         <g-link
           to="/"
-          class="flex items-center text-xl font-bold text-navy dark:text-gray"
+          class="no-underline flex items-center text-xl font-bold text-navy dark:text-gray"
         >
           <Logo class="w-8 mr-4" />
           {{ $static.metadata.siteName }}
@@ -22,21 +22,21 @@
         >
           <nav class="flex flex-col lg:flex-row">
             <g-link
-              class="py-4 lg:py-0 px-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              class="nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/"
               @click="closeMenu"
             >
               Home
             </g-link>
             <g-link
-              class="py-4 lg:py-0 px-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              class="nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/about/"
               @click="closeMenu"
             >
               About
             </g-link>
             <g-link
-              class="py-4 lg:py-0 px-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              class="nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/blog/"
               @click="closeMenu"
             >
@@ -111,3 +111,25 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.nav-item::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  position: relative;
+  top: 1px;
+  background: #3abfc8;
+  transition: width 0.3s;
+}
+
+.nav-item.active--exact {
+  box-shadow: inset 0 -1px 0 0 #3abfc8;
+  border-bottom: 1px solid #3abfc8;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+</style>
