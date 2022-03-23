@@ -42,6 +42,13 @@
             >
               Blog
             </g-link>
+            <g-link
+              class="nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              to="/contact/"
+              @click="closeMenu"
+            >
+              Contact
+            </g-link>
           </nav>
 
           <div class="hidden lg:block h-7 w-px mx-6 bg-navy dark:bg-gray" />
