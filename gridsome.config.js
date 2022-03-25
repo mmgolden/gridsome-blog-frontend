@@ -19,7 +19,7 @@ module.exports = {
       options: {
         url: process.env.GRIDSOME_API_URL,
         fieldName: "strapi",
-        typeName: "strapi",
+        typeName: "strapiTypes",
 
         headers: {
           Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
