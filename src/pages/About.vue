@@ -14,7 +14,7 @@
 export default {
   metaInfo: {
     title: "About",
-    titleTemplate: "Melinda Golden | %s"
+    titleTemplate: "%s | Melinda Golden"
   }
 };
 </script>
