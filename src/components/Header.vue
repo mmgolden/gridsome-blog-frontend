@@ -22,7 +22,7 @@
         >
           <nav class="flex flex-col lg:flex-row">
             <g-link
-              class="nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              class="home nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/"
               @click="closeMenu"
             >
@@ -131,7 +131,13 @@ export default {
   transition: width 0.3s;
 }
 
-.nav-item.active--exact {
+.home.nav-item.active {
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.nav-item.active,
+.home.nav-item.active--exact {
   box-shadow: inset 0 -1px 0 0 #3abfc8;
   border-bottom: 1px solid #3abfc8;
 }
