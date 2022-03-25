@@ -17,9 +17,11 @@
 
     <div class="container mx-auto lg:grid grid-cols-3 gap-4 px-4 2xl:px-0">
       <div v-for="article in articles" :key="article.id" class="mb-10 lg:mb-0">
-        <h3 class="text-2xl font-bold text-navy dark:text-gray pb-4">
-          {{ article.attributes.title }}
-        </h3>
+        <g-link :to="`/blog/${article.attributes.slug}`">
+          <h3 class="text-2xl font-bold text-navy dark:text-gray pb-4">
+            {{ article.attributes.title }}
+          </h3>
+        </g-link>
         <div
           class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mb-4"
         >
