@@ -4,9 +4,11 @@
     <Header />
 
     <!-- Page container -->
-    <main class="pt-16 -mt-0.5">
-      <slot />
-    </main>
+    <transition name="fade" appear>
+      <main class="pt-16 -mt-0.5">
+        <slot />
+      </main>
+    </transition>
 
     <!-- Footer -->
     <Footer />
@@ -24,3 +26,13 @@ export default {
   }
 };
 </script>
+
+<style>
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+</style>
