@@ -61,6 +61,34 @@ module.exports = function (api) {
     }
   });
 
+  // Create category pages
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`
+      {
+        strapi {
+          categories {
+            data {
+              id
+              attributes {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `);
+
+    data.strapi.categories.data.forEach((node) => {
+      createPage({
+        path: `/categories/${node.attributes.slug}`,
+        component: "./src/templates/CategoryTemplate.vue",
+        context: {
+          id: node.id
+        }
+      });
+    });
+  });
+
   // Create individual article pages
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`
@@ -80,7 +108,7 @@ module.exports = function (api) {
 
     data.strapi.articles.data.forEach((node) => {
       createPage({
-        path: `/blog/${node.attributes.slug}`,
+        path: `/${node.attributes.slug}`,
         component: "./src/templates/ArticleTemplate.vue",
         context: {
           id: node.id
