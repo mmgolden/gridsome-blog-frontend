@@ -1,5 +1,5 @@
 <template>
-  <ArticleView :articles="articles" :pagination="pagination" />
+  <ArticleView title="Blog" :articles="articles" :pagination="pagination" />
 </template>
 
 <page-query>
