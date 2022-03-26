@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Title -->
-    <g-link :to="`/blog/${article.attributes.slug}`">
+    <g-link :to="`/${article.attributes.slug}`">
       <h3 class="text-2xl font-bold text-navy dark:text-gray pb-4">
         {{ article.attributes.title }}
       </h3>
@@ -11,7 +11,11 @@
     <div class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mb-4">
       {{ formatPublishDate(article.attributes.publishedAt) }}
       -
-      {{ article.attributes.category.data.attributes.name }}
+      <g-link
+        :to="`/categories/${article.attributes.category.data.attributes.slug}`"
+      >
+        {{ article.attributes.category.data.attributes.name }}
+      </g-link>
     </div>
 
     <!-- Description -->
