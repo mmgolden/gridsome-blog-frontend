@@ -3,9 +3,9 @@
 </template>
 
 <page-query>
-query {
+query GetArticles($blogPage: Int, $blogPageSize: Int) {
   strapi {
-    articles(pagination: { page: 1, pageSize: 6 }) {
+    articles(pagination: { page: $blogPage, pageSize: $blogPageSize }) {
       data {
         id
         attributes {
