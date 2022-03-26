@@ -1,6 +1,8 @@
 <template>
-  <footer class="px-4 2xl:px-0 py-7 mt-auto">
-    <div class="container mx-auto lg:flex items-center justify-between">
+  <footer class="py-7 mt-auto">
+    <div
+      class="container mx-auto lg:flex items-center justify-between px-4 2xl:px-0"
+    >
       <!-- Copyright -->
       <div class="lg:flex">
         <p class="text-base font-medium text-navy dark:text-gray">

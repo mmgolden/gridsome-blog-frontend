@@ -1,8 +1,10 @@
 <template>
   <header
-    class="z-10 p-4 fixed inset-x-0 transition duration-500 bg-gray-dark dark:bg-navy-dark"
+    class="z-10 py-4 fixed inset-x-0 transition duration-500 bg-gray-dark dark:bg-navy-dark"
   >
-    <div class="container mx-auto flex items-center justify-between">
+    <div
+      class="container mx-auto flex items-center justify-between px-4 2xl:px-0"
+    >
       <!-- Logo -->
       <div>
         <g-link
