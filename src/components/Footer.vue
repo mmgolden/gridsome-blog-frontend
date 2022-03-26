@@ -6,7 +6,7 @@
         <p class="text-base font-medium text-navy dark:text-gray">
           © Copyright {{ currentYear }} {{ $static.metadata.siteName }}
         </p>
-        <p class="hidden lg:block mx-2">|</p>
+        <p class="hidden lg:block mx-2 text-navy dark:text-gray">|</p>
         <p class="pt-2 lg:pt-0 text-base font-medium text-navy dark:text-gray">
           Built with <a href="https://strapi.io/" target="_blank">Strapi</a> and
           <a href="https://gridsome.org/" target="_blank">Gridsome</a>
