@@ -10,6 +10,7 @@
         quality="100"
         immediate
         class="w-full rounded"
+        alt="Melinda Golden standing on rock"
       />
 
       <p class="text-lg font-medium text-navy dark:text-gray pt-10 pb-6">
