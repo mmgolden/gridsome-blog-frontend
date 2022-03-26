@@ -15,7 +15,7 @@
 
     <!-- Content -->
     <div
-      class="article-content container mx-auto py-44 text-lg font-medium text-navy dark:text-gray px-4 2xl:px-0"
+      class="article-content container mx-auto py-16 lg:py-32 text-lg font-medium text-navy dark:text-gray px-4 2xl:px-0"
     >
       <Markdown :source="article.body" />
     </div>

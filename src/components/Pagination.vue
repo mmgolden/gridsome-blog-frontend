@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto flex items-center pb-44 px-4 2xl:px-0">
+  <div class="container mx-auto flex items-center pb-16 lg:pb-32 px-4 2xl:px-0">
     <!-- Previous -->
     <g-link
       v-if="pagination.page !== 1"
