@@ -17,21 +17,7 @@
 
     <div class="container mx-auto lg:grid grid-cols-3 gap-4 px-4 2xl:px-0">
       <div v-for="article in articles" :key="article.id" class="mb-10 lg:mb-0">
-        <g-link :to="`/blog/${article.attributes.slug}`">
-          <h3 class="text-2xl font-bold text-navy dark:text-gray pb-4">
-            {{ article.attributes.title }}
-          </h3>
-        </g-link>
-        <div
-          class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mb-4"
-        >
-          {{ formatPublishDate(article.attributes.publishedAt) }}
-          -
-          {{ article.attributes.category.data.attributes.name }}
-        </div>
-        <p class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray">
-          {{ article.attributes.description }}
-        </p>
+        <ArticleCard :article="article" />
       </div>
     </div>
   </div>
@@ -75,23 +61,18 @@ query {
 </static-query>
 
 <script>
+import ArticleCard from "@/components/ArticleCard.vue";
 import ArrowRight from "~/assets/svgs/ArrowRight.svg";
-import formatDate from "@/utils/formatDate.js";
 
 export default {
   components: {
+    ArticleCard,
     ArrowRight
   },
 
   computed: {
     articles() {
       return this.$static.strapi.articles.data.slice(0, 3);
-    }
-  },
-
-  methods: {
-    formatPublishDate(date) {
-      return formatDate(date);
     }
   }
 };
