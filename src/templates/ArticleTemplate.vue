@@ -64,10 +64,6 @@ export default {
     article() {
       return this.$page.strapi.article.data.attributes;
     }
-  },
-
-  mounted() {
-    window.console.log(this.$page.strapi);
   }
 };
 </script>
