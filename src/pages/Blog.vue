@@ -1,5 +1,5 @@
 <template>
-  <BlogView :articles="articles" :pagination="pagination" />
+  <ArticleView :articles="articles" :pagination="pagination" />
 </template>
 
 <page-query>
@@ -48,7 +48,7 @@ query {
 </page-query>
 
 <script>
-import BlogView from "@/components/BlogView.vue";
+import ArticleView from "@/components/ArticleView.vue";
 
 export default {
   metaInfo: {
@@ -57,7 +57,7 @@ export default {
   },
 
   components: {
-    BlogView
+    ArticleView
   },
 
   computed: {
