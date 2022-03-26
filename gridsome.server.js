@@ -80,7 +80,7 @@ module.exports = function (api) {
 
     data.strapi.categories.data.forEach((node) => {
       createPage({
-        path: `/categories/${node.attributes.slug}`,
+        path: `/category/${node.attributes.slug}`,
         component: "./src/templates/CategoryTemplate.vue",
         context: {
           id: node.id

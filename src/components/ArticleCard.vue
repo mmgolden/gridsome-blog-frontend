@@ -2,7 +2,7 @@
   <div>
     <!-- Title -->
     <g-link :to="`/${article.attributes.slug}`">
-      <h3 class="text-2xl font-bold text-navy dark:text-gray pb-4">
+      <h3 class="text-3xl font-bold text-navy dark:text-gray pb-4">
         {{ article.attributes.title }}
       </h3>
     </g-link>
@@ -12,7 +12,7 @@
       {{ formatPublishDate(article.attributes.publishedAt) }}
       -
       <g-link
-        :to="`/categories/${article.attributes.category.data.attributes.slug}`"
+        :to="`/category/${article.attributes.category.data.attributes.slug}`"
       >
         {{ article.attributes.category.data.attributes.name }}
       </g-link>
