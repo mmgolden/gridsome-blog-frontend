@@ -1,7 +1,7 @@
 <template>
   <div class="transition duration-500 bg-gray-dark dark:bg-navy-dark">
     <div
-      class="container mx-auto py-28 flex flex-col justify-center items-center"
+      class="container mx-auto py-16 lg:py-28 flex flex-col justify-center items-center"
     >
       <h1
         class="text-4xl lg:text-5xl lg:leading-snug text-center font-bold text-navy dark:text-gray"

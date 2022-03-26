@@ -4,7 +4,7 @@
     <PageTitle :title="title" />
 
     <!-- Articles -->
-    <div class="container mx-auto pt-44 px-4 2xl:px-0">
+    <div class="container mx-auto pt-16 lg:pt-32 px-4 2xl:px-0">
       <div v-for="article in articles" :key="article.id">
         <ArticleCard :article="article" />
 
