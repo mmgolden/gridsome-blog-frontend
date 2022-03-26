@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-dark dark:bg-navy-dark">
+  <div class="transition duration-500 bg-gray-dark dark:bg-navy-dark">
     <div
       class="container mx-auto py-28 flex flex-col justify-center items-center"
     >

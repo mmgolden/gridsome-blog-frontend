@@ -1,5 +1,7 @@
 <template>
-  <header class="z-10 p-4 fixed inset-x-0 bg-gray-dark dark:bg-navy-dark">
+  <header
+    class="z-10 p-4 fixed inset-x-0 transition duration-500 bg-gray-dark dark:bg-navy-dark"
+  >
     <div class="container mx-auto flex items-center justify-between">
       <!-- Logo -->
       <div>
@@ -14,7 +16,7 @@
 
       <!-- Navigation -->
       <div
-        class="lg:block w-full lg:w-auto fixed lg:static top-16 left-0 right-0 bottom-0 flex flex-col lg:flex-row bg-gray-dark dark:bg-navy-dark"
+        class="lg:block w-full lg:w-auto fixed lg:static top-16 left-0 right-0 bottom-0 flex flex-col lg:flex-row transition duration-500 bg-gray-dark dark:bg-navy-dark"
         :class="{ hidden: !isMenuOpen }"
       >
         <div
@@ -22,28 +24,28 @@
         >
           <nav class="flex flex-col lg:flex-row">
             <g-link
-              class="home nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              class="home nav-item no-underline my-4 lg:my-0 mx-auto lg:mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/"
               @click="closeMenu"
             >
               Home
             </g-link>
             <g-link
-              class="nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              class="nav-item no-underline my-4 lg:my-0 mx-auto lg:mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/about/"
               @click="closeMenu"
             >
               About
             </g-link>
             <g-link
-              class="nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              class="nav-item no-underline my-4 lg:my-0 mx-auto lg:mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/blog/"
               @click="closeMenu"
             >
               Blog
             </g-link>
             <g-link
-              class="nav-item no-underline my-4 lg:my-0 mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
+              class="nav-item no-underline my-4 lg:my-0 mx-auto lg:mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/contact/"
               @click="closeMenu"
             >

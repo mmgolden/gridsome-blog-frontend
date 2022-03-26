@@ -11,6 +11,7 @@
   body {
     font-family: Lora, ui-serif, serif;
     @apply bg-gray;
+    transition: background-color 0.5s;
   }
 
   html.dark,

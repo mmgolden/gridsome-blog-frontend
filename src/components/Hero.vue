@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-dark dark:bg-navy-dark">
+  <div class="transition duration-500 bg-gray-dark dark:bg-navy-dark">
     <div class="container mx-auto lg:grid grid-cols-2 gap-4 px-4 2xl:px-0">
       <!-- Introduction -->
       <div class="pt-16 pb-96 lg:pt-36 lg:pb-36">
