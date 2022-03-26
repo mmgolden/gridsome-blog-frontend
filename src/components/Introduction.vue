@@ -5,17 +5,15 @@
     </h2>
 
     <p class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray">
-      I'm a front end developer with experience in Vue, React, TypeScript, and
-      GraphQL. I'm interested in responsive design and cross-platform mobile app
-      development. What I enjoy about development is bringing together design
-      with code
+      During my 3+ years in software development, I have used Vue, React,
+      TypeScript, Apollo, and GraphQL. What I enjoy about development is
+      bringing together design with code.
     </p>
 
     <div class="flex flex-col">
       <p class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray">
         For me, there isn't a better feeling than creating something from
-        nothing. I get excited about coding a beautiful UI and I can honestly
-        say that I love CSS.
+        nothing. I get excited about coding a beautiful UI.
       </p>
       <g-link
         class="flex items-center mr-auto lg:mr-0 lg:ml-auto text-lg font-bold text-navy dark:text-gray"

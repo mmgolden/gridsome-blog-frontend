@@ -9,7 +9,7 @@
           Hello, I'm Melinda Golden.
         </h1>
         <p class="text-2xl lg:text-3xl font-medium text-navy dark:text-gray">
-          I'm a front end developer based in Asheville, NC.
+          I'm a front-end developer based in Asheville, NC.
         </p>
       </div>
 
