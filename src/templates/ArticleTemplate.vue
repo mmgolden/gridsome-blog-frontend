@@ -57,10 +57,6 @@ export default {
   },
 
   computed: {
-    articleId() {
-      return this.$page.strapi.article.data.id;
-    },
-
     article() {
       return this.$page.strapi.article.data.attributes;
     }
