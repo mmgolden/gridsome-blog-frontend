@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <!-- Title -->
-    <PageTitle title="Blog" />
+    <PageTitle :title="title" />
 
     <!-- Articles -->
     <div class="container mx-auto pt-44 px-4 2xl:px-0">
@@ -13,7 +13,7 @@
     </div>
 
     <!-- Pagination -->
-    <Pagination :pagination="pagination" />
+    <Pagination v-if="pagination" :pagination="pagination" />
   </Layout>
 </template>
 
@@ -30,6 +30,11 @@ export default {
   },
 
   props: {
+    title: {
+      type: String,
+      required: true
+    },
+
     articles: {
       type: Array,
       required: true
@@ -37,7 +42,8 @@ export default {
 
     pagination: {
       type: Object,
-      required: true
+      required: false,
+      default: () => {}
     }
   }
 };
