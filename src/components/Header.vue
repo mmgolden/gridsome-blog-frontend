@@ -144,7 +144,9 @@ export default {
   border-bottom: 1px solid #3abfc8;
 }
 
-.nav-item:hover::after {
-  width: 100%;
+@media (hover: hover) {
+  .nav-item:hover::after {
+    width: 100%;
+  }
 }
 </style>
