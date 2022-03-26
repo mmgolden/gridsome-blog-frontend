@@ -4,7 +4,7 @@
       class="container mx-auto py-28 flex flex-col justify-center items-center"
     >
       <h1
-        class="text-4xl lg:text-5xl text-center font-bold text-navy dark:text-gray"
+        class="text-4xl lg:text-5xl lg:leading-snug text-center font-bold text-navy dark:text-gray"
       >
         {{ title }}
       </h1>
