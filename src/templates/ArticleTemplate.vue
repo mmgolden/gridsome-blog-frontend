@@ -68,7 +68,50 @@ export default {
   metaInfo() {
     return {
       title: this.article.title,
-      titleTemplate: "%s"
+      titleTemplate: "%s",
+      link: [
+        {
+          rel: "canonical",
+          content: `https://melindagolden.com/${this.article.slug}/`
+        }
+      ],
+      meta: [
+        {
+          key: "og:title",
+          name: "og:title",
+          content: this.article.title
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: this.article.title
+        },
+        {
+          key: "og:type",
+          name: "og:type",
+          content: "article"
+        },
+        {
+          key: "og:url",
+          name: "og:url",
+          content: `https://melindagolden.com/${this.article.slug}/`
+        },
+        {
+          key: "description",
+          name: "description",
+          content: this.article.description
+        },
+        {
+          key: "og:description",
+          name: "og:description",
+          content: this.article.description
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.article.description
+        }
+      ]
     };
   },
 

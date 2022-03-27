@@ -54,7 +54,25 @@ import PageTitle from "@/components/PageTitle.vue";
 export default {
   metaInfo: {
     title: "About",
-    titleTemplate: "%s | Melinda Golden"
+    titleTemplate: "%s | Melinda Golden",
+    link: [
+      {
+        rel: "canonical",
+        content: "https://melindagolden.com/about/"
+      }
+    ],
+    meta: [
+      {
+        key: "og:title",
+        name: "og:title",
+        content: "About | Melinda Golden"
+      },
+      {
+        key: "twitter:title",
+        name: "twitter:title",
+        content: "About | Melinda Golden"
+      }
+    ]
   },
 
   components: {

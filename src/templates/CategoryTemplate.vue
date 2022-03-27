@@ -56,7 +56,34 @@ export default {
   metaInfo() {
     return {
       title: this.category.name,
-      titleTemplate: "%s | Melinda Golden"
+      titleTemplate: "%s | Melinda Golden",
+      meta: [
+        {
+          key: "og:title",
+          name: "og:title",
+          content: `${this.category.name} | Melinda Golden`
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: `${this.category.name} | Melinda Golden`
+        },
+        {
+          key: "description",
+          name: "description",
+          content: this.category.description
+        },
+        {
+          key: "og:description",
+          name: "og:description",
+          content: this.category.description
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.category.description
+        }
+      ]
     };
   },
 
