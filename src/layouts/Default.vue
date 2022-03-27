@@ -39,21 +39,6 @@ export default {
       meta: [
         { key: "author", name: "author", content: "Melinda Golden" },
         {
-          key: "description",
-          name: "description",
-          content: this.$static.metadata.siteDescription
-        },
-        {
-          key: "og:description",
-          name: "og:description",
-          content: this.$static.metadata.siteDescription
-        },
-        {
-          key: "twitter:description",
-          name: "twitter:description",
-          content: this.$static.metadata.siteDescription
-        },
-        {
           key: "twitter:site",
           name: "twitter:site",
           content: this.$static.metadata.twitter.site
