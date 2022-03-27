@@ -8,6 +8,15 @@ if (process.env.NODE_ENV === "production")
 
 module.exports = {
   siteName: "Melinda Golden",
+  siteDescription:
+    "A blog by Melinda Golden, a front-end developer based in Asheville, NC.",
+  siteUrl: "https://melindagolden.com",
+  metadata: {
+    twitter: {
+      site: "@melindamgolden",
+      creator: "@melindamgolden"
+    }
+  },
   chainWebpack: (config) => {
     const svgRule = config.module.rule("svg");
     svgRule.uses.clear();
@@ -25,6 +34,10 @@ module.exports = {
           Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
         }
       }
+    },
+    {
+      use: "@gridsome/plugin-sitemap",
+      options: {}
     }
   ],
   css: {
