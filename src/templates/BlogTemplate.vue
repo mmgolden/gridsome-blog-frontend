@@ -4,6 +4,9 @@
 
 <page-query>
 query GetArticles($blogPage: Int, $blogPageSize: Int) {
+  metadata {
+    siteDescription
+  }
   strapi {
     articles(pagination: { page: $blogPage, pageSize: $blogPageSize }) {
       data {
@@ -51,21 +54,38 @@ query GetArticles($blogPage: Int, $blogPageSize: Int) {
 import ArticleView from "@/components/ArticleView.vue";
 
 export default {
-  metaInfo: {
-    title: "Blog",
-    titleTemplate: "%s | Melinda Golden",
-    meta: [
-      {
-        key: "og:title",
-        name: "og:title",
-        content: "Blog | Melinda Golden"
-      },
-      {
-        key: "twitter:title",
-        name: "twitter:title",
-        content: "Blog | Melinda Golden"
-      }
-    ]
+  metaInfo() {
+    return {
+      title: "Blog",
+      titleTemplate: "%s | Melinda Golden",
+      meta: [
+        {
+          key: "og:title",
+          name: "og:title",
+          content: "Blog | Melinda Golden"
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: "Blog | Melinda Golden"
+        },
+        {
+          key: "description",
+          name: "description",
+          content: this.$page.metadata.siteDescription
+        },
+        {
+          key: "og:description",
+          name: "og:description",
+          content: this.$page.metadata.siteDescription
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.$page.metadata.siteDescription
+        }
+      ]
+    };
   },
 
   components: {

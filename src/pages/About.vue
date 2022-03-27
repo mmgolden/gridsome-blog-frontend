@@ -48,31 +48,56 @@
   </Layout>
 </template>
 
+<page-query>
+query {
+  metadata {
+    siteDescription
+  }
+}
+</page-query>
+
 <script>
 import PageTitle from "@/components/PageTitle.vue";
 
 export default {
-  metaInfo: {
-    title: "About",
-    titleTemplate: "%s | Melinda Golden",
-    link: [
-      {
-        rel: "canonical",
-        content: "https://melindagolden.com/about/"
-      }
-    ],
-    meta: [
-      {
-        key: "og:title",
-        name: "og:title",
-        content: "About | Melinda Golden"
-      },
-      {
-        key: "twitter:title",
-        name: "twitter:title",
-        content: "About | Melinda Golden"
-      }
-    ]
+  metaInfo() {
+    return {
+      title: "About",
+      titleTemplate: "%s | Melinda Golden",
+      link: [
+        {
+          rel: "canonical",
+          content: "https://melindagolden.com/about/"
+        }
+      ],
+      meta: [
+        {
+          key: "og:title",
+          name: "og:title",
+          content: "About | Melinda Golden"
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: "About | Melinda Golden"
+        },
+        {
+          key: "description",
+          name: "description",
+          content: this.$page.metadata.siteDescription
+        },
+        {
+          key: "og:description",
+          name: "og:description",
+          content: this.$page.metadata.siteDescription
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.$page.metadata.siteDescription
+        }
+      ]
+    };
   },
 
   components: {

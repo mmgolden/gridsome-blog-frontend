@@ -4,6 +4,9 @@
 
 <page-query>
 query {
+  metadata {
+    siteDescription
+  }
   strapi {
     articles(pagination: { page: 1, pageSize: 6 }) {
       data {
@@ -51,27 +54,44 @@ query {
 import ArticleView from "@/components/ArticleView.vue";
 
 export default {
-  metaInfo: {
-    title: "Blog",
-    titleTemplate: "%s | Melinda Golden",
-    link: [
-      {
-        rel: "canonical",
-        content: "https://melindagolden.com/blog/"
-      }
-    ],
-    meta: [
-      {
-        key: "og:title",
-        name: "og:title",
-        content: "Blog | Melinda Golden"
-      },
-      {
-        key: "twitter:title",
-        name: "twitter:title",
-        content: "Blog | Melinda Golden"
-      }
-    ]
+  metaInfo() {
+    return {
+      title: "Blog",
+      titleTemplate: "%s | Melinda Golden",
+      link: [
+        {
+          rel: "canonical",
+          content: "https://melindagolden.com/blog/"
+        }
+      ],
+      meta: [
+        {
+          key: "og:title",
+          name: "og:title",
+          content: "Blog | Melinda Golden"
+        },
+        {
+          key: "twitter:title",
+          name: "twitter:title",
+          content: "Blog | Melinda Golden"
+        },
+        {
+          key: "description",
+          name: "description",
+          content: this.$page.metadata.siteDescription
+        },
+        {
+          key: "og:description",
+          name: "og:description",
+          content: this.$page.metadata.siteDescription
+        },
+        {
+          key: "twitter:description",
+          name: "twitter:description",
+          content: this.$page.metadata.siteDescription
+        }
+      ]
+    };
   },
 
   components: {
