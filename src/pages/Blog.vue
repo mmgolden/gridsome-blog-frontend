@@ -53,7 +53,25 @@ import ArticleView from "@/components/ArticleView.vue";
 export default {
   metaInfo: {
     title: "Blog",
-    titleTemplate: "%s | Melinda Golden"
+    titleTemplate: "%s | Melinda Golden",
+    link: [
+      {
+        rel: "canonical",
+        content: "https://melindagolden.com/blog/"
+      }
+    ],
+    meta: [
+      {
+        key: "og:title",
+        name: "og:title",
+        content: "Blog | Melinda Golden"
+      },
+      {
+        key: "twitter:title",
+        name: "twitter:title",
+        content: "Blog | Melinda Golden"
+      }
+    ]
   },
 
   components: {

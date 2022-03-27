@@ -20,7 +20,25 @@ export default {
 
   metaInfo: {
     title: "Melinda Golden",
-    titleTemplate: "%s"
+    titleTemplate: "%s",
+    link: [
+      {
+        rel: "canonical",
+        content: "https://melindagolden.com"
+      }
+    ],
+    meta: [
+      {
+        key: "og:title",
+        name: "og:title",
+        content: "Melinda Golden"
+      },
+      {
+        key: "twitter:title",
+        name: "twitter:title",
+        content: "Melinda Golden"
+      }
+    ]
   }
 };
 </script>
