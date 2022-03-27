@@ -1,5 +1,5 @@
 // Import global styles
-require("~/main.css");
+import "~/main.css";
 
 import DefaultLayout from "~/layouts/Default.vue";
 import VueGtag from "vue-gtag";
