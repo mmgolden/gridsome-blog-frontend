@@ -1,4 +1,4 @@
 Sitemap: https://melindagolden.com/sitemap.xml
 
-User-agent:*
-Disallow: /
+User-agent: *
+Allow: /
