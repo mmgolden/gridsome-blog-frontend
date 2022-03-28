@@ -5,7 +5,7 @@
 
     <!-- Page container -->
     <transition name="fade" appear>
-      <main class="pt-16 -mt-0.5">
+      <main>
         <slot />
       </main>
     </transition>
