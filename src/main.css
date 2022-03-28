@@ -10,23 +10,23 @@
   html,
   body {
     font-family: Lora, ui-serif, serif;
-    @apply bg-gray;
+    background-color: #f6f8fa;
     transition: background-color 0.5s;
   }
 
   code {
-    @apply bg-gray-dark;
+    background-color: #eff1f3;
     padding: 0.25rem 0.5rem;
     transition: background-color 0.5s;
   }
 
   html.dark,
   html.dark body {
-    @apply bg-navy;
+    background-color: #313e50;
   }
 
   html.dark code {
-    @apply bg-navy-dark;
+    background-color: #293443;
     padding: 0.25rem 0.5rem;
   }
 
