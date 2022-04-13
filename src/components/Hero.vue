@@ -15,7 +15,7 @@
 
       <!-- Image -->
       <div class="relative lg:flex justify-center">
-        <div class="image absolute -bottom-24 2xl:-bottom-20 lg:ml-14">
+        <div class="image absolute -bottom-20 2xl:-bottom-16 lg:ml-14">
           <g-image
             src="~/assets/pngs/cutout.png"
             quality="100"
