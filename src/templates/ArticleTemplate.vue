@@ -1,23 +1,36 @@
 <template>
   <Layout>
-    <!-- Title -->
-    <PageTitle :title="article.title">
-      <div
-        class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mt-4"
-      >
-        {{ formatPublishDate(article.publishedAt) }}
-        -
-        <g-link :to="`/category/${article.category.data.attributes.slug}`">
+    <article>
+      <!-- Title -->
+      <PageTitle :title="article.title">
+        <p
+          class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mt-4"
+        >
+          {{ formatPublishDate(article.publishedAt) }}
+          <span v-if="article.readingTime"> • {{ article.readingTime }} </span>
+        </p>
+        <g-link
+          :to="`/category/${article.category.data.attributes.slug}`"
+          class="text-lg font-medium text-navy dark:text-gray mt-4"
+        >
           {{ article.category.data.attributes.name }}
         </g-link>
-      </div>
-    </PageTitle>
+      </PageTitle>
 
-    <!-- Content -->
-    <div
-      class="article-content container mx-auto py-16 lg:py-32 text-lg font-medium text-navy dark:text-gray px-4 2xl:px-0"
-    >
-      <Markdown :source="article.body" />
+      <!-- Content -->
+      <div
+        class="article-content container mx-auto py-16 lg:py-32 text-lg font-medium text-navy dark:text-gray px-4 2xl:px-0"
+      >
+        <Markdown :source="article.body" />
+      </div>
+    </article>
+
+    <div class="transition duration-500 pt-16 bg-gray-dark dark:bg-navy-dark">
+      <div
+        class="container mx-auto py-16 lg:py-28 flex flex-col justify-center items-center px-4 2xl:px-0"
+      >
+        <NewsletterForm />
+      </div>
     </div>
   </Layout>
 </template>
@@ -29,6 +42,7 @@ query GetArticle($id: ID!) {
       data {
         id
         attributes {
+          readingTime
           title
           description
           slug
@@ -62,6 +76,8 @@ query GetArticle($id: ID!) {
 <script>
 import PageTitle from "@/components/PageTitle.vue";
 import Markdown from "@/components/Markdown.vue";
+import NewsletterForm from "@/components/NewsletterForm.vue";
+
 import formatDate from "@/utils/formatDate.js";
 
 export default {
@@ -117,7 +133,8 @@ export default {
 
   components: {
     PageTitle,
-    Markdown
+    Markdown,
+    NewsletterForm
   },
 
   computed: {
@@ -139,51 +156,51 @@ export default {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content h2 {
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content h3 {
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 2.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content h4 {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content h5 {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content h6 {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content ul,
 ::v-deep .article-content ol {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content ul {
@@ -199,11 +216,11 @@ export default {
 ::v-deep .article-content blockquote {
   border-left: 5px solid #cecece;
   padding-left: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content pre {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::v-deep .article-content pre code {
