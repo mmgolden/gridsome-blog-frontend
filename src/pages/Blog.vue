@@ -12,6 +12,7 @@ query {
       data {
         id
         attributes {
+          readingTime
           title
           description
           slug
