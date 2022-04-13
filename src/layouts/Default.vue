@@ -57,13 +57,13 @@ export default {
           key: "og:image",
           property: "og:image",
           content:
-            "https://res.cloudinary.com/melindagolden/image/upload/v1648401743/gridsome-blog/ufblni9gujjglmxjfol2.png"
+            "https://res.cloudinary.com/melindagolden/image/upload/v1649532939/gridsome-blog/meta-og.png"
         },
         {
           key: "twitter:image",
           property: "twitter:image",
           content:
-            "https://res.cloudinary.com/melindagolden/image/upload/v1648401743/gridsome-blog/ufblni9gujjglmxjfol2.png"
+            "https://res.cloudinary.com/melindagolden/image/upload/v1649532939/gridsome-blog/meta-twitter.png"
         }
       ]
     };
