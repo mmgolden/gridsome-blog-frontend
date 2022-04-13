@@ -1,6 +1,6 @@
 <template>
   <button
-    class="flex justify-center items-center"
+    class="theme-button flex justify-center items-center"
     :aria-label="theme === 'light' ? 'Toggle dark theme' : 'Toggle light theme'"
     @click="toggleTheme"
   >
@@ -58,3 +58,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.theme-button:focus-visible {
+  outline: none;
+  border: 2px solid #3abfc8;
+}
+</style>
