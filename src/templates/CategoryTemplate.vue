@@ -16,6 +16,7 @@ query GetCategory($id: ID!) {
             data {
               id
               attributes {
+                readingTime
                 title
                 description
                 slug

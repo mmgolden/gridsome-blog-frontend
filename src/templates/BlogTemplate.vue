@@ -12,6 +12,7 @@ query GetArticles($blogPage: Int, $blogPageSize: Int) {
       data {
         id
         attributes {
+          readingTime
           title
           description
           slug
