@@ -17,7 +17,7 @@
 
     <div class="container mx-auto lg:grid grid-cols-3 gap-4 px-4 2xl:px-0">
       <div v-for="article in articles" :key="article.id" class="mb-10 lg:mb-0">
-        <ArticleCard :article="article" />
+        <ArticleCard :article="article" hide-read-more />
       </div>
     </div>
   </div>
@@ -30,6 +30,7 @@ query {
       data {
         id
         attributes {
+          readingTime
           title
           description
           slug
