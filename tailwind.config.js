@@ -18,6 +18,9 @@ module.exports = {
         border: {
           DEFAULT: "#cecece"
         },
+        primary: {
+          DEFAULT: "#3abfc8"
+        },
         gray: {
           dark: "#EFF1F3",
           DEFAULT: "#F6F8FA"
