@@ -7,7 +7,7 @@
         Latest Articles
       </h2>
       <g-link
-        class="more-articles flex items-center mr-auto lg:mr-0 lg:ml-auto text-lg font-bold text-navy dark:text-gray"
+        class="link flex items-center mr-auto lg:mr-0 lg:ml-auto text-lg font-bold text-navy dark:text-gray"
         to="/blog/"
       >
         More articles
@@ -15,9 +15,14 @@
       </g-link>
     </div>
 
-    <div class="container mx-auto lg:grid grid-cols-3 gap-4 px-4 2xl:px-0">
-      <div v-for="article in articles" :key="article.id" class="mb-10 lg:mb-0">
-        <ArticleCard :article="article" hide-read-more />
+    <div class="container mx-auto px-4 2xl:px-0">
+      <div v-for="(article, index) in articles" :key="article.id">
+        <ArticleCard :article="article" />
+
+        <div
+          v-if="index !== articles.length - 1"
+          class="w-full h-px my-10 bg-border dark:bg-gray"
+        />
       </div>
     </div>
   </div>
@@ -80,7 +85,7 @@ export default {
 </script>
 
 <style scoped>
-.more-articles {
+.link {
   height: 29px;
 }
 </style>
