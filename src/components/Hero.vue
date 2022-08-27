@@ -1,8 +1,10 @@
 <template>
   <div class="transition duration-500 pt-16 bg-gray-dark dark:bg-navy-dark">
-    <div class="container mx-auto lg:grid grid-cols-2 gap-4 px-4 2xl:px-0">
+    <div
+      class="container mx-auto px-4 pt-4 pb-12 2xl:px-0 md:grid grid-cols-2 gap-4 items-center"
+    >
       <!-- Introduction -->
-      <div class="pt-16 pb-96 lg:pt-36 lg:pb-36">
+      <div class="py-8 md:py-0">
         <h1
           class="text-4xl lg:text-5xl mb-2.5 font-bold text-navy dark:text-gray"
         >
@@ -14,8 +16,8 @@
       </div>
 
       <!-- Image -->
-      <div class="relative lg:flex justify-center">
-        <div class="image absolute -bottom-20 2xl:-bottom-16 lg:ml-14">
+      <div class="justify-self-center">
+        <div class="image">
           <g-image
             src="~/assets/pngs/cutout.png"
             quality="100"
@@ -32,7 +34,18 @@
 <style scoped>
 .image {
   width: 100%;
-  max-width: 359px;
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    max-width: 280px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .image {
+    max-width: 332px;
+  }
 }
 
 .highlight {
