@@ -21,7 +21,6 @@
           <g-image
             src="~/assets/pngs/cutout.png"
             quality="100"
-            immediate
             alt="Headshot of Melinda Golden"
             class="w-full"
           />
