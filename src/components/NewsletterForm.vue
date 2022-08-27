@@ -16,17 +16,13 @@
         <h2
           class="text-center lg:text-left text-3xl font-bold text-navy dark:text-gray pb-4"
         >
-          Learn more about <span class="highlight">front-end development</span>
+          <span class="highlight">Subscribe</span> to get my latest articles
         </h2>
         <p
           class="text-center lg:text-left text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mb-4"
         >
           Hi, my name is Melinda Golden. I'm a front-end developer. Find out
-          when I publish new content by subscribing to my newsletter. Find me on
-          Twitter
-          <a href="https://twitter.com/melindamgolden" target="_blank">
-            @melindamgolden
-          </a>
+          when I publish new content by subscribing to my newsletter.
         </p>
       </div>
     </div>
