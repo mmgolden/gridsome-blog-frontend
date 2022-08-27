@@ -8,7 +8,6 @@
       <g-image
         src="~/assets/pngs/about.png"
         quality="100"
-        immediate
         class="w-full rounded"
         alt="Melinda Golden standing on rock"
       />
