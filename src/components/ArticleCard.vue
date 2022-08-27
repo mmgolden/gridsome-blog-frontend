@@ -5,20 +5,22 @@
       <h3 class="text-3xl font-bold text-navy dark:text-gray pb-4">
         {{ article.attributes.title }}
       </h3>
-
-      <!-- Date and read time -->
-      <p class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mb-4">
-        {{ formatPublishDate(article.attributes.publishedAt) }}
-        <span v-if="article.attributes.readingTime">
-          • {{ article.attributes.readingTime }}
-        </span>
-      </p>
-
-      <!-- Description -->
-      <p class="text-lg font-medium pb-5 lg:pb-0 mb-4 text-navy dark:text-gray">
-        {{ article.attributes.description }}
-      </p>
     </g-link>
+
+    <!-- Date and read time -->
+    <p class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mb-4">
+      {{ formatPublishDate(article.attributes.publishedAt) }}
+      <span v-if="article.attributes.readingTime">
+        • {{ article.attributes.readingTime }}
+      </span>
+    </p>
+
+    <!-- Description -->
+    <p class="text-lg font-medium pb-5 lg:pb-0 mb-4 text-navy dark:text-gray">
+      {{ article.attributes.description }}
+    </p>
+
+    <!-- Read more -->
     <g-link
       v-if="!hideReadMore"
       class="read-more flex items-center mr-auto text-lg font-bold text-navy dark:text-gray"
