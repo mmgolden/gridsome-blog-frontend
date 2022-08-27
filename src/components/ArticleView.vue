@@ -5,10 +5,13 @@
 
     <!-- Articles -->
     <div class="container mx-auto pt-16 lg:pt-32 px-4 2xl:px-0">
-      <div v-for="article in articles" :key="article.id">
+      <div v-for="(article, index) in articles" :key="article.id">
         <ArticleCard :article="article" />
 
-        <div class="w-full h-px my-10 bg-border dark:bg-gray" />
+        <div
+          v-if="index !== articles.length - 1"
+          class="w-full h-px my-10 bg-border dark:bg-gray"
+        />
       </div>
     </div>
 
