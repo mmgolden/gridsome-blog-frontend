@@ -17,10 +17,10 @@
     "autoprefixer": "^9.8.8",
     "babel-runtime": "^6.26.0",
     "gridsome": "^0.7.23",
+    "gridsome-plugin-plausible-analytics": "^1.1.0",
     "postcss": "^7.0.39",
     "prismjs": "^1.27.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",
-    "vue-gtag": "^1.16.1",
     "vue-markdown": "^2.2.4",
     "vue-svg-loader": "^0.16.0"
   },
