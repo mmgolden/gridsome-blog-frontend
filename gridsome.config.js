@@ -36,6 +36,13 @@ module.exports = {
       }
     },
     {
+      use: "gridsome-plugin-plausible-analytics",
+      options: {
+        dataDomain: "melindagolden.com",
+        outboundLinkTracking: false
+      }
+    },
+    {
       use: "@gridsome/plugin-sitemap",
       options: {}
     }
