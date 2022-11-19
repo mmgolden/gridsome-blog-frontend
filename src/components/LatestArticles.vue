@@ -1,5 +1,8 @@
 <template>
-  <div class="py-44 transition duration-500 bg-gray-dark dark:bg-navy-dark">
+  <div
+    v-if="articles.length > 0"
+    class="py-44 transition duration-500 bg-gray-dark dark:bg-navy-dark"
+  >
     <div
       class="container mx-auto flex flex-col lg:flex-row lg:justify-between pb-16 px-4 2xl:px-0"
     >
@@ -28,44 +31,6 @@
   </div>
 </template>
 
-<static-query>
-query {
-  strapi {
-    articles {
-      data {
-        id
-        attributes {
-          readingTime
-          title
-          description
-          slug
-          author {
-            data {
-              id
-              attributes {
-                name
-                avatar_url
-              }
-            }
-          }
-          category {
-            data {
-              id
-              attributes {
-                name
-                slug
-              }
-            }
-          }
-          body
-          publishedAt
-        }
-      }
-    }
-  }
-}
-</static-query>
-
 <script>
 import ArticleCard from "@/components/ArticleCard.vue";
 import ArrowRight from "~/assets/svgs/ArrowRight.svg";
@@ -78,7 +43,7 @@ export default {
 
   computed: {
     articles() {
-      return this.$static.strapi.articles.data.slice(0, 3);
+      return [];
     }
   }
 };
