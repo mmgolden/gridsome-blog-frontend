@@ -10,7 +10,7 @@
         </p>
         <p class="hidden lg:block mx-2 text-navy dark:text-gray">|</p>
         <p class="pt-2 lg:pt-0 text-base font-medium text-navy dark:text-gray">
-          Built with <a href="https://strapi.io/" target="_blank">Strapi</a> and
+          Built with
           <a href="https://gridsome.org/" target="_blank">Gridsome</a>
         </p>
       </div>
@@ -18,8 +18,7 @@
       <!-- Links -->
       <p class="pt-2 lg:pt-0 text-base font-medium text-navy dark:text-gray">
         Follow me on
-        <a href="https://twitter.com/melindamgolden" target="_blank"> Twitter</a
-        >, <a href="https://github.com/mmgolden" target="_blank">GitHub</a>, and
+        <a href="https://github.com/mmgolden" target="_blank">GitHub</a> and
         <a href="https://www.linkedin.com/in/melindamgolden/" target="_blank">
           LinkedIn</a
         >.

@@ -34,12 +34,6 @@
         knowledge with other developers. Besides coding, I enjoy traveling,
         hiking, kayaking, and photography.
       </p>
-      <p class="text-lg font-medium text-navy dark:text-gray pb-6">
-        You can find me on Twitter
-        <a href="https://twitter.com/melindamgolden" target="_blank">
-          @melindamgolden
-        </a>
-      </p>
     </div>
   </Layout>
 </template>
