@@ -26,13 +26,6 @@
         >
           <nav class="flex flex-col lg:flex-row">
             <g-link
-              class="home nav-item no-underline my-4 lg:my-0 mx-auto lg:mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
-              to="/"
-              @click="closeMenu"
-            >
-              Home
-            </g-link>
-            <g-link
               class="nav-item no-underline my-4 lg:my-0 mx-auto lg:mx-6 text-center text-2xl lg:text-xl font-medium text-navy dark:text-gray"
               to="/about/"
               @click="closeMenu"
