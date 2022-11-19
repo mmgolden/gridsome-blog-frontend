@@ -1,30 +1,28 @@
 <template>
   <div class="transition duration-500 pt-16 bg-gray-dark dark:bg-navy-dark">
-    <div
-      class="container mx-auto px-4 pt-4 pb-12 2xl:px-0 md:grid grid-cols-2 gap-4 items-center"
-    >
-      <!-- Introduction -->
-      <div class="py-8 md:py-0">
+    <div class="container mx-auto px-4 pt-20 pb-32 2xl:px-0">
+      <div class="lg:max-w-xl">
+        <!-- Avatar -->
+        <div class="w-28 mb-6">
+          <g-image
+            src="~/assets/pngs/avatar.png"
+            quality="100"
+            alt="Headshot of Melinda Golden"
+            class="avatar rounded-full"
+          />
+        </div>
+
         <h1
-          class="text-4xl lg:text-5xl mb-2.5 font-bold text-navy dark:text-gray"
+          class="text-4xl lg:text-5xl mb-4 font-bold text-navy dark:text-gray"
         >
           Hello, I'm <span class="highlight">Melinda Golden</span>.
         </h1>
-        <p class="text-2xl lg:text-3xl font-medium text-navy dark:text-gray">
-          I'm a front-end developer based in Asheville, NC.
-        </p>
-      </div>
 
-      <!-- Image -->
-      <div class="justify-self-center">
-        <div class="image">
-          <g-image
-            src="~/assets/pngs/cutout.png"
-            quality="100"
-            alt="Headshot of Melinda Golden"
-            class="w-full"
-          />
-        </div>
+        <p class="text-xl font-medium text-navy dark:text-gray">
+          I’m a software developer based in Asheville, NC. I went from working
+          as a photographer to a front-end developer at startups. I share my
+          journey building products.
+        </p>
       </div>
     </div>
   </div>
