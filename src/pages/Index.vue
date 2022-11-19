@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <Hero />
-    <Introduction />
     <LatestArticles />
   </Layout>
 </template>
@@ -16,13 +15,11 @@ query {
 
 <script>
 import Hero from "@/components/Hero.vue";
-import Introduction from "@/components/Introduction.vue";
 import LatestArticles from "@/components/LatestArticles.vue";
 
 export default {
   components: {
     Hero,
-    Introduction,
     LatestArticles
   },
 
