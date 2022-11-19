@@ -24,18 +24,6 @@ module.exports = {
   },
   plugins: [
     {
-      use: "@gridsome/source-graphql",
-      options: {
-        url: process.env.GRIDSOME_API_URL,
-        fieldName: "strapi",
-        typeName: "strapiTypes",
-
-        headers: {
-          Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`
-        }
-      }
-    },
-    {
       use: "gridsome-plugin-plausible-analytics",
       options: {
         dataDomain: "melindagolden.com",
@@ -45,6 +33,14 @@ module.exports = {
     {
       use: "@gridsome/plugin-sitemap",
       options: {}
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "blog/**/*.md",
+        typeName: "blogPost",
+        remark: {}
+      }
     }
   ],
   css: {
@@ -52,6 +48,11 @@ module.exports = {
       postcss: {
         plugins: postcssPlugins
       }
+    }
+  },
+  transformers: {
+    remark: {
+      plugins: ["@gridsome/remark-prismjs"]
     }
   }
 };

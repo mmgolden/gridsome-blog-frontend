@@ -7,47 +7,6 @@ query {
   metadata {
     siteDescription
   }
-  strapi {
-    articles(pagination: { page: 1, pageSize: 6 }) {
-      data {
-        id
-        attributes {
-          readingTime
-          title
-          description
-          slug
-          author {
-            data {
-              id
-              attributes {
-                name
-                avatar_url
-              }
-            }
-          }
-          category {
-            data {
-              id
-              attributes {
-                name
-                slug
-              }
-            }
-          }
-          body
-          publishedAt
-        }
-      }
-      meta {
-        pagination {
-          total
-          page
-          pageSize
-          pageCount
-        }
-      }
-    }
-  }
 }
 </page-query>
 
@@ -101,11 +60,16 @@ export default {
 
   computed: {
     articles() {
-      return this.$page.strapi.articles.data;
+      return [];
     },
 
     pagination() {
-      return this.$page.strapi.articles.meta.pagination;
+      return {
+        page: 1,
+        pageCount: 1,
+        pageSize: 6,
+        total: 0
+      };
     }
   }
 };

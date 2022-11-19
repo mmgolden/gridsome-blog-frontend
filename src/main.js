@@ -1,3 +1,6 @@
+// Import prism styles
+import "prismjs/themes/prism.css";
+
 // Import global styles
 import "~/main.css";
 

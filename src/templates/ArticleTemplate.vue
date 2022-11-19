@@ -35,44 +35,6 @@
   </Layout>
 </template>
 
-<page-query>
-query GetArticle($id: ID!) {
-  strapi {
-    article(id: $id) {
-      data {
-        id
-        attributes {
-          readingTime
-          title
-          description
-          slug
-          author {
-            data {
-              id
-              attributes {
-                name
-                avatar_url
-              }
-            }
-          }
-          category {
-            data {
-              id
-              attributes {
-                name
-                slug
-              }
-            }
-          }
-          body
-          publishedAt
-        }
-      }
-    }
-  }
-}
-</page-query>
-
 <script>
 import PageTitle from "@/components/PageTitle.vue";
 import Markdown from "@/components/Markdown.vue";
@@ -139,7 +101,23 @@ export default {
 
   computed: {
     article() {
-      return this.$page.strapi.article.data.attributes;
+      return {
+        body: "Body",
+        description: "Description",
+        publishedAt: "2022-03-17T23:06:15.434Z",
+        readingTime: "4 min read",
+        slug: "this-is-a-sample-blog-post",
+        title: "This is a sample blog post",
+        category: {
+          data: {
+            id: "1",
+            attributes: {
+              name: "Category",
+              slug: "category"
+            }
+          }
+        }
+      };
     }
   },
 
