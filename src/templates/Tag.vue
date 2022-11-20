@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <!-- Title -->
-    <PageTitle title="Blog" />
+    <PageTitle :title="tag.title" />
 
     <!-- Posts -->
     <div class="container mx-auto py-16 lg:py-32 px-4 2xl:px-0">
@@ -16,34 +16,43 @@
 
       <!-- Pagination -->
       <Pagination
-        v-if="$page.allPost.pageInfo.totalPages > 1"
-        :page-info="$page.allPost.pageInfo"
+        v-if="$page.tag.belongsTo.pageInfo.totalPages > 1"
+        :page-info="$page.tag.belongsTo.pageInfo"
+        :path="`tag/${tag.id}`"
       />
     </div>
   </Layout>
 </template>
 
 <page-query>
-query AllPost($page: Int) {
+query Tag($id: ID!, $page: Int) {
   metadata {
     siteDescription
   }
-  allPost(sortBy: "date", order: DESC, perPage: 6, page: $page) @paginate {
-    edges {
-      node {
-        id
-        title
-        date(format: "MMMM D, Y")
-        excerpt
-        slug
-        timeToRead
+  tag(id: $id) {
+    id
+    title
+    belongsTo(page: $page, perPage: 6) @paginate {
+      edges {
+        node {
+          ... on Post {
+            title
+            slug
+            date(format: "MMMM D, Y")
+            excerpt
+            timeToRead
+            tags {
+              title
+            }
+          }
+        }
       }
-    }
-    pageInfo {
-      totalPages
-      currentPage
-      isFirst
-      isLast
+      pageInfo {
+        totalPages
+        currentPage
+        isFirst
+        isLast
+      }
     }
   }
 }
@@ -57,24 +66,24 @@ import Pagination from "@/components/Pagination.vue";
 export default {
   metaInfo() {
     return {
-      title: "Blog",
+      title: this.tag.title,
       titleTemplate: "%s | Melinda Golden",
       link: [
         {
           rel: "canonical",
-          content: "https://melindagolden.com/blog/"
+          content: `https://melindagolden.com/tag/${this.tag.id}`
         }
       ],
       meta: [
         {
           key: "og:title",
           name: "og:title",
-          content: "Blog | Melinda Golden"
+          content: `${this.tag.title} | Melinda Golden`
         },
         {
           key: "twitter:title",
           name: "twitter:title",
-          content: "Blog | Melinda Golden"
+          content: `${this.tag.title} | Melinda Golden`
         },
         {
           key: "description",
@@ -102,8 +111,12 @@ export default {
   },
 
   computed: {
+    tag() {
+      return this.$page.tag;
+    },
+
     posts() {
-      return this.$page.allPost.edges;
+      return this.$page.tag.belongsTo.edges;
     }
   }
 };

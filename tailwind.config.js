@@ -19,7 +19,10 @@ module.exports = {
           DEFAULT: "#cecece"
         },
         primary: {
-          DEFAULT: "#3abfc8"
+          dark: "#126c72",
+          DEFAULT: "#3abfc8",
+          hover: "#92cfd4",
+          light: "#a7dde1"
         },
         gray: {
           dark: "#EFF1F3",

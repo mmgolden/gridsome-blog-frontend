@@ -1,12 +1,9 @@
 <template>
-  <div
-    v-if="articles.length > 0"
-    class="py-44 transition duration-500 bg-gray-dark dark:bg-navy-dark"
-  >
+  <div v-if="posts.length > 0" class="py-44 transition duration-500">
     <div
       class="container mx-auto flex flex-col lg:flex-row lg:justify-between pb-16 px-4 2xl:px-0"
     >
-      <h2 class="text-4xl font-bold pb-5 lg:pb-0 text-navy dark:text-gray">
+      <h2 class="text-3xl font-bold pb-5 lg:pb-0 text-navy dark:text-gray">
         Latest Articles
       </h2>
       <g-link
@@ -19,11 +16,11 @@
     </div>
 
     <div class="container mx-auto px-4 2xl:px-0">
-      <div v-for="(article, index) in articles" :key="article.id">
-        <ArticleCard :article="article" />
+      <div v-for="(post, index) in posts" :key="post.id">
+        <PostCard :post="post" />
 
         <div
-          v-if="index !== articles.length - 1"
+          v-if="index !== posts.length - 1"
           class="w-full h-px my-10 bg-border dark:bg-gray"
         />
       </div>
@@ -31,19 +28,36 @@
   </div>
 </template>
 
+<static-query>
+query AllPost {
+  allPost(sortBy: "date", order: DESC, limit: 3) {
+    edges {
+      node {
+        id
+        title
+        date(format: "MMMM D, Y")
+        excerpt
+        slug
+        timeToRead
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
-import ArticleCard from "@/components/ArticleCard.vue";
+import PostCard from "@/components/PostCard.vue";
 import ArrowRight from "~/assets/svgs/ArrowRight.svg";
 
 export default {
   components: {
-    ArticleCard,
+    PostCard,
     ArrowRight
   },
 
   computed: {
-    articles() {
-      return [];
+    posts() {
+      return this.$static.allPost.edges;
     }
   }
 };

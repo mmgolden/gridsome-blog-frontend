@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === "production")
 module.exports = {
   siteName: "Melinda Golden",
   siteDescription:
-    "A blog by Melinda Golden, a front-end developer based in Asheville, NC.",
+    "A blog by Melinda Golden, a software developer based in Asheville, NC.",
   siteUrl: "https://melindagolden.com",
   metadata: {
     twitter: {
@@ -38,11 +38,24 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         path: "blog/**/*.md",
-        typeName: "blogPost",
-        remark: {}
+        typeName: "Post",
+        remark: {
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+        },
+        refs: {
+          tags: {
+            typeName: "Tag",
+            create: true
+          }
+        }
       }
     }
   ],
+  templates: {
+    Post: "/:slug",
+    Tag: "/tag/:id"
+  },
   css: {
     loaderOptions: {
       postcss: {

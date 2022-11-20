@@ -1,30 +1,27 @@
 <template>
   <article class="flex flex-col">
-    <g-link :to="`/${article.attributes.slug}`" class="no-underline">
+    <g-link :to="`/${post.node.slug}`" class="no-underline">
       <!-- Title -->
-      <h3 class="text-3xl font-bold text-navy dark:text-gray pb-4">
-        {{ article.attributes.title }}
+      <h3 class="text-2xl font-bold text-navy dark:text-gray pb-4">
+        {{ post.node.title }}
       </h3>
     </g-link>
 
-    <!-- Date and read time -->
+    <!-- Date -->
     <p class="text-lg font-medium pb-5 lg:pb-0 text-navy dark:text-gray mb-4">
-      {{ formatPublishDate(article.attributes.publishedAt) }}
-      <span v-if="article.attributes.readingTime">
-        • {{ article.attributes.readingTime }}
-      </span>
+      {{ post.node.date }} · {{ post.node.timeToRead }} min read
     </p>
 
-    <!-- Description -->
+    <!-- Excerpt -->
     <p class="text-lg font-medium pb-5 lg:pb-0 mb-4 text-navy dark:text-gray">
-      {{ article.attributes.description }}
+      {{ post.node.excerpt }}
     </p>
 
     <!-- Read more -->
     <g-link
       v-if="!hideReadMore"
       class="read-more flex items-center mr-auto text-lg font-bold text-navy dark:text-gray"
-      :to="`/${article.attributes.slug}`"
+      :to="`/${post.node.slug}`"
     >
       Read more
       <ArrowRight class="ml-1 stroke-current text-navy dark:text-gray" />
@@ -34,7 +31,6 @@
 
 <script>
 import ArrowRight from "~/assets/svgs/ArrowRight.svg";
-import formatDate from "@/utils/formatDate.js";
 
 export default {
   components: {
@@ -42,7 +38,7 @@ export default {
   },
 
   props: {
-    article: {
+    post: {
       type: Object,
       required: true
     },
@@ -51,12 +47,6 @@ export default {
       type: Boolean,
       required: false,
       default: false
-    }
-  },
-
-  methods: {
-    formatPublishDate(date) {
-      return formatDate(date);
     }
   }
 };
