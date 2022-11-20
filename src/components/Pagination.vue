@@ -1,24 +1,32 @@
 <template>
-  <div class="container mx-auto flex items-center pb-16 lg:pb-32 px-4 2xl:px-0">
-    <!-- Previous -->
-    <g-link
-      v-if="pagination.page !== 1"
-      class="flex items-center text-lg font-bold text-navy dark:text-gray"
-      :to="pagination.page === 2 ? '/blog/' : `/blog/${pagination.page - 1}`"
-    >
-      <ArrowLeft class="mr-1 stroke-current text-navy dark:text-gray" />
-      Prev
-    </g-link>
+  <div class="container mx-auto mt-8">
+    <div class="w-full h-px my-10 bg-border dark:bg-gray" />
 
-    <!-- Next -->
-    <g-link
-      v-if="pagination.page !== pagination.pageCount"
-      class="flex items-center ml-auto text-lg font-bold text-navy dark:text-gray"
-      :to="`/blog/${pagination.page + 1}`"
-    >
-      Next
-      <ArrowRight class="ml-1 stroke-current text-navy dark:text-gray" />
-    </g-link>
+    <div class="flex items-center">
+      <!-- Previous -->
+      <g-link
+        v-if="!pageInfo.isFirst"
+        class="flex items-center text-lg font-bold text-navy dark:text-gray"
+        :to="
+          pageInfo.currentPage === 2
+            ? `/${path}/`
+            : `/${path}/${pageInfo.currentPage - 1}`
+        "
+      >
+        <ArrowLeft class="mr-1 stroke-current text-navy dark:text-gray" />
+        Prev
+      </g-link>
+
+      <!-- Next -->
+      <g-link
+        v-if="!pageInfo.isLast"
+        class="flex items-center ml-auto text-lg font-bold text-navy dark:text-gray"
+        :to="`/${path}/${pageInfo.currentPage + 1}`"
+      >
+        Next
+        <ArrowRight class="ml-1 stroke-current text-navy dark:text-gray" />
+      </g-link>
+    </div>
   </div>
 </template>
 
@@ -33,9 +41,15 @@ export default {
   },
 
   props: {
-    pagination: {
+    pageInfo: {
       type: Object,
       required: true
+    },
+
+    path: {
+      type: String,
+      required: false,
+      default: "blog"
     }
   }
 };
