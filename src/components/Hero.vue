@@ -29,20 +29,8 @@
 </template>
 
 <style scoped>
-.image {
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .image {
-    max-width: 280px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .image {
-    max-width: 332px;
-  }
+.avatar {
+  width: 112px;
 }
 
 .highlight {
