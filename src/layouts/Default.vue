@@ -77,6 +77,11 @@ export default {
 </script>
 
 <style scoped>
+html,
+body {
+  font-family: Lora, ui-serif, serif;
+}
+
 .fade-enter-active {
   transition: opacity 0.5s;
 }
